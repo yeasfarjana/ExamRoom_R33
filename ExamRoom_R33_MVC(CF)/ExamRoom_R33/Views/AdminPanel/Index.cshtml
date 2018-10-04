@@ -1,0 +1,677 @@
+﻿@model IEnumerable<ExamRoom_R33.Models.InstituteAdmin>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/radar.js"></script>
+    <link href="css/barChart.css" rel='stylesheet' type='text/css' />
+    <link href="css/fabochart.css" rel='stylesheet' type='text/css' />
+    <!--clock init-->
+    <script src="js/css3clock.js"></script>
+    <!--Easy Pie Chart-->
+    <!--skycons-icons-->
+    <script src="js/skycons.js"></script>
+
+    <script src="js/jquery.easydropdown.js"></script>
+
+    <!--//skycons-icons-->
+</head>
+<body>
+    <div class="page-container" style="margin-top:50px; margin-left:-40px;">
+        <!--/content-inner-->
+        <div class="left-content">
+            <div class="inner-content">
+                <!-- header-starts -->
+                <div class="header-section">
+                    <!--menu-right-->
+                    <div class="top_menu">
+                        <div class="main-search">
+                            <form>
+                                <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text" />
+                                <input type="submit" value="">
+                            </form>
+                            <div class="close"><img src="images/cross.png" /></div>
+                        </div>
+                        <div class="srch"><button></button></div>
+                        <script type="text/javascript">
+										 $('.main-search').hide();
+										$('button').click(function (){
+											$('.main-search').show();
+											$('.main-search text').focus();
+										}
+										);
+										$('.close').click(function(){
+											$('.main-search').hide();
+										});
+                        </script>
+                        <!--/profile_details-->
+                        <div class="profile_details_left">
+                            <ul class="nofitications-dropdown">
+
+                                <li class="dropdown note">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope-o"></i> <span class="badge">3</span></a>
+
+
+                                    <ul class="dropdown-menu two first">
+                                        <li>
+                                            <div class="notification_header">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/1.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet</p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li class="odd">
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/in1.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all messages</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown note">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell-o"></i> <span class="badge">5</span></a>
+
+                                    <ul class="dropdown-menu two">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 5 new notification</h3>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet</p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li class="odd">
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/in5.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="user_img"><img src="images/in8.jpg" alt=""></div>
+                                                <div class="notification_desc">
+                                                    <p>Lorem ipsum dolor sit amet </p>
+                                                    <p><span>1 hour ago</span></p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all notification</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown note">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i> <span class="badge blue1">9</span></a>
+                                    <ul class="dropdown-menu two">
+                                        <li>
+                                            <div class="notification_header">
+                                                <h3>You have 9 pending task</h3>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar yellow" style="width:40%;"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar green" style="width:90%;"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar red" style="width: 33%;"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="task-info">
+                                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="progress progress-striped active">
+                                                    <div class="bar  blue" style="width: 80%;"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="notification_bottom">
+                                                <a href="#">See all pending task</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!--//profile_details-->
+                    </div>
+                    <!--//menu-right-->
+                    <div class="clearfix"></div>
+                </div>
+                <!-- //header-ends -->
+                <div class="outter-wp">
+                    <!--custom-widgets-->
+                    <div class="custom-widgets">
+                        <div class="row-one">
+                            <div class="col-md-3 widget">
+                                <div class="stats-left ">
+                                    <h5>Today</h5>
+                                    <h4> Users</h4>
+                                </div>
+                                <div class="stats-right">
+                                    <label>90</label>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="col-md-3 widget states-mdl">
+                                <div class="stats-left">
+                                    <h5>Today</h5>
+                                    <h4>Visitors</h4>
+                                </div>
+                                <div class="stats-right">
+                                    <label> 85</label>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="col-md-3 widget states-thrd">
+                                <div class="stats-left">
+                                    <h5>Today</h5>
+                                    <h4>Tasks</h4>
+                                </div>
+                                <div class="stats-right">
+                                    <label>51</label>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="col-md-3 widget states-last">
+                                <div class="stats-left">
+                                    <h5>Today</h5>
+                                    <h4>Alerts</h4>
+                                </div>
+                                <div class="stats-right">
+                                    <label>30</label>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <!--//custom-widgets-->
+                    <!--//weather-charts-->
+                    <div class="graph-visualization">
+                        <div class="col-md-6 map-1">
+                            <h3 class="sub-tittle">Weather </h3>
+                            <div class="weather">
+                                <div class="weather-top">
+                                    <div class="weather-top-left">
+                                        <div class="degree">
+                                            <figure class="icons">
+                                                <canvas id="partly-cloudy-day" width="64" height="64"></canvas>
+                                            </figure>
+                                            <span>37°</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <script>
+																			 var icons = new Skycons({"color": "#002561"}),
+																				  list  = [
+																					"clear-night", "partly-cloudy-day",
+																					"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+																					"fog"
+																				  ],
+																				  i;
+
+																			  for(i = list.length; i--; )
+																				icons.set(list[i], list[i]);
+
+																			  icons.play();
+                                        </script>
+                                        <p>
+                                            FRIDAY
+                                            <label>13</label>
+                                            <sup>th</sup>
+                                            AUG
+                                        </p>
+                                    </div>
+                                    <div class="weather-top-right">
+                                        <p><i class="fa fa-map-marker"></i>Location</p>
+                                        <label>Lorem ipsum</label>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="weather-bottom">
+                                    <div class="weather-bottom1">
+                                        <div class="weather-head">
+                                            <h4>Cloudy</h4>
+                                            <figure class="icons">
+                                                <canvas id="cloudy" width="40" height="40"></canvas>
+                                            </figure>
+                                            <script>
+																			 var icons = new Skycons({"color": "#00C6D7"}),
+																				  list  = [
+																					"clear-night", "cloudy",
+																					"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+																					"fog"
+																				  ],
+																				  i;
+
+																			  for(i = list.length; i--; )
+																				icons.set(list[i], list[i]);
+
+																			  icons.play();
+                                            </script>
+                                            <h6>20°</h6>
+                                            <div class="bottom-head">
+                                                <p>Monday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weather-bottom1 ">
+                                        <div class="weather-head">
+                                            <h4>Sunny</h4>
+                                            <figure class="icons">
+                                                <canvas id="clear-day" width="40" height="40"></canvas>
+
+                                            </figure>
+                                            <script>
+																			 var icons = new Skycons({"color": "#00C6D7"}),
+																				  list  = [
+																					"clear-night", "clear-day",
+																					"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+																					"fog"
+																				  ],
+																				  i;
+
+																			  for(i = list.length; i--; )
+																				icons.set(list[i], list[i]);
+
+																			  icons.play();
+                                            </script>
+                                            <h6>37°</h6>
+                                            <div class="bottom-head">
+                                                <p>Tuesday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weather-bottom1">
+                                        <div class="weather-head">
+                                            <h4>Rainy</h4>
+                                            <figure class="icons">
+                                                <canvas id="sleet" width="40" height="40"></canvas>
+                                            </figure>
+                                            <script>
+																			 var icons = new Skycons({"color": "#00C6D7"}),
+																				  list  = [
+																					"clear-night", "clear-day",
+																					"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+																					"fog"
+																				  ],
+																				  i;
+
+																			  for(i = list.length; i--; )
+																				icons.set(list[i], list[i]);
+
+																			  icons.play();
+                                            </script>
+
+                                            <h6>7°</h6>
+                                            <div class="bottom-head">
+                                                <p>Wednesday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weather-bottom1 ">
+                                        <div class="weather-head">
+                                            <h4>Snowy</h4>
+                                            <figure class="icons">
+                                                <canvas id="snow" width="40" height="40"></canvas>
+                                            </figure>
+                                            <script>
+																			 var icons = new Skycons({"color": "#00C6D7"}),
+																				  list  = [
+																					"clear-night", "clear-day",
+																					"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+																					"fog"
+																				  ],
+																				  i;
+
+																			  for(i = list.length; i--; )
+																				icons.set(list[i], list[i]);
+
+																			  icons.play();
+                                            </script>
+                                            <h6>-10°</h6>
+                                            <div class="bottom-head">
+                                                <p>Thursday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 map-2">
+                            <div class="profile-nav alt">
+                                <section class="panel">
+                                    <div class="user-heading alt clock-row terques-bg">
+                                        <h3 class="sub-tittle clock">Easy Clock </h3>
+                                    </div>
+                                    <ul id="clock">
+                                        <li id="sec"></li>
+                                        <li id="hour"></li>
+                                        <li id="min"></li>
+                                    </ul>
+
+                                    <ul class="clock-category">
+                                        <li>
+                                            <a href="#" class="active">
+                                                <img src="images/time.png" alt="">
+                                                <span>Clock</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/alarm.png" alt="">
+                                                <span>Alarm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/watch.png" alt="">
+                                                <span>Stop watch</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/timer.png" alt="">
+                                                <span>Timer</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <!--//charts-->
+                    <div class="area-charts">
+                        <div class="col-md-6 panel-chrt">
+                            <h3 class="sub-tittle dyna">Dynamic Speedometer </h3>
+                            <div id="wrapper">
+                                <div id="left">
+                                    <div>
+                                        <label for='miles'>Miles:</label> <input type="text" name="miles" id="miles" />
+                                    </div>
+                                    <div>
+                                        <label for='kilometers'>Kilometers:</label> <input type="text" name="kilometers" id="kilometers" />
+                                    </div>
+                                    <p id="errmsg"></p>
+                                </div>
+
+                                <div id="gauge">
+                                    <div id="circle"></div>
+                                    <div id="numbers"></div>
+                                    <div id="mi-km"></div>
+                                    <div id="needle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 tini-time-line">
+                            <h3 class="sub-tittle">Time line </h3>
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-smile-o"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Title</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Description...</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="timeline-badge primary"><i class="fa fa-star-o"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Title</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Description...</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+                                <li>
+                                    <div class="timeline-badge danger"><i class="fa fa-times-circle-o"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Title</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Description...</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="timeline-badge success"><i class="fa fa-check-circle-o"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Title</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Description...</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                </div>
+                <!--/charts-inner-->
+            </div>
+            <!--//outer-wp-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <div class="sidebar-menu" style="margin-top:50px;">
+        <header class="logo">
+            <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html">
+                <span id="logo"> <h1>Exam Room</h1></span>
+                <!--<img id="logo" src="" alt="Logo"/>-->
+            </a>
+        </header>
+        <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+
+        <div class="menu">
+            <ul id="menu">
+                <li><a href="index.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+                <li id="menu-academico">
+                    <a href="#"><i class="fa fa-table"></i> <span> Table Info</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                    <ul id="menu-academico-sub">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Institute Admin"))
+                            {
+                                <li id="menu-academico-avaliacoes">@Html.ActionLink("Examiner", "Index", "Examiner")</li>
+                                <li id="menu-academico-boletim">@Html.ActionLink("Question Maker", "Index", "QuestionMaker")</li>
+                            }
+                        }                        
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Examiner"))
+                            {
+                                <li id="menu-academico-avaliacoes">@Html.ActionLink("Examinee", "Index", "Examinee")</li>
+                                <li id="menu-academico-avaliacoes">@Html.ActionLink("Registration", "Index", "Registration")</li>
+                                <li id="menu-academico-avaliacoes">@Html.ActionLink("Test Paper", "Index", "TestXPaper")</li>
+                            }
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Question Maker"))
+                            {
+                                <li>@Html.ActionLink("Question Categorie", "Index", "QuestionCategorie")</li>
+                                <li>@Html.ActionLink("Question", "Create", "Question")</li>
+                                <li>@Html.ActionLink("Choice", "Index", "Choice")</li>
+                                <li>@Html.ActionLink("Test", "Index", "Test")</li>
+                                <li>@Html.ActionLink("Test Question", "Index", "TestXQuestion")</li>
+                            }
+                        }
+
+                    </ul>
+                </li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("Institute Admin"))
+                    {
+                        <li>@Html.ActionLink("Audit Info", "Index", "ExamAudit")</li>
+                    }
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("System Admin"))
+                    {
+                        <li>@Html.ActionLink("Role Manage", "Index", "Roles")</li>
+                    }
+                    else if (User.IsInRole("Institute Admin"))
+                    {
+                        <li>@Html.ActionLink("Role Manage", "Index", "Roles")</li>
+                    }
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("System Admin"))
+                    {
+                        <li>@Html.ActionLink("All Email", "dummy", null, new { href = "https://mail.google.com/mail/#inbox" })</li>
+                                    <li>@Html.ActionLink("Feedback", "Index", "Feedback")</li>
+                                    <li>@Html.ActionLink("Institute Info", "Index", "InstituteAdmin")</li>
+                    }
+                }
+                
+                
+                <li id="menu-comunicacao">
+                    <a href="#"><i class="fa fa-smile-o"></i> <span>More</span><span class="fa fa-angle-double-right" style="float: right"></span></a>
+                    <ul id="menu-comunicacao-sub">
+                        <li>@Html.ActionLink("Calender", "Calender", "AdminPanel")</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    
+    <!--js -->
+    <link rel="stylesheet" href="css/vroom.css">
+    <script type="text/javascript" src="js/vroom.js"></script>
+    <script type="text/javascript" src="js/TweenLite.min.js"></script>
+    <script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

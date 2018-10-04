@@ -1,0 +1,58 @@
+﻿@model ExamRoom_R33.Models.SessionModel
+
+
+@{
+    ViewBag.Title = "Instruction";
+}
+
+<div class="container" style="margin-top:120px;">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@ViewBag.TestName</h2>
+            @ViewBag.TestDescription
+        </div>
+        <div class="col-md-6">
+            Test Duration : @(ViewBag.TestDuration) minutes
+            <br />Total Question :  @ViewBag.QuestionCount
+        </div>
+    </div>
+
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h3 class="text-danger">Befor you begin please read the following instruction carefully</h3>
+        </div>
+    </div>
+
+    <h3 class="text-danger">How to score more</h3>
+    <p>
+        <ul>
+            <li>The test is used to evaluate your expertise, creativity, knowladge and decision making technique.</li>
+            <li>Don't use internet or external resources.</li>
+            <li>Remember that this is a test of experience. So, think twice and answer wisely.</li>
+            <li>Recommended that review all the question before you start answering them.</li>
+        </ul>
+    </p>
+    <h3 class="text-danger">How to use the application</h3>
+    <p>
+        <ul>
+            <li>Your time starts when you click the <b>Start</b> button below.</li>
+            <li>Your answer are not tracked unless you click on the <b>Save &amp; Next</b> or <b>Save &amp; Previous</b> button.</li>
+            <li>You can navigate pages by clicking <b>Question Number</b> button or <b>Next</b> or <b>Previous</b> button.</li>
+            <li>There is no <b>End</b> or <b>Submit</b> button to end the evaluation. Just walk out when you done.</li>
+        </ul>
+    </p>
+    @if (Model != null)
+    {
+        using (Html.BeginForm("Register", "ExamSection", FormMethod.Post, new { @id = "formRegister" }))
+        {
+            @Html.HiddenFor(x => Model.TestId)
+            @Html.HiddenFor(x => Model.UserName)
+            @Html.HiddenFor(x => Model.Email)           
+
+            <a href="javascript:void(0);" onclick="getElementById('formRegister').submit();" class="btn btn-primary btn-lg">Start</a>
+        }
+    }
+</div>
+
+

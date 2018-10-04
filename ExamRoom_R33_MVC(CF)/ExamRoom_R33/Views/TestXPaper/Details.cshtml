@@ -1,0 +1,58 @@
+﻿@model ExamRoom_R33.Models.TestXPaper
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TestXPaper</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Choice.Label)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Choice.Label)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TextXQuestionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextXQuestionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarkScored)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarkScored)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

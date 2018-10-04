@@ -1,0 +1,64 @@
+﻿@model ExamRoom_R33.Models.TestXPaper
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TestXPaper</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Choice.Label)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Choice.Label)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TextXQuestionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextXQuestionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarkScored)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarkScored)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

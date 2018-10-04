@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ExamRoom_R33.Models.Registration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center" style="margin-top:80px;">Registraion Information of Examinees</h2>
+<hr />
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Examinee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Token)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TokenExpireTime)
+        </th>*@
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Examinee.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationDate)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Token)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TokenExpireTime)
+        </td>*@
+
+    </tr>
+}
+
+</table>

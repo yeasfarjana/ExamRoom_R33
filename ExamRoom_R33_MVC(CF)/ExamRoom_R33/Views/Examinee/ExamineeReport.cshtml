@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ExamRoom_R33.Models.Examinee>
+
+@{
+    ViewBag.Title = "ExamineeReport";
+}
+
+
+
+<h2 class="text-center" style="margin-top:80px;">Examinee List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+             Examinee Name
+        </th>        
+        <th>
+           Date of Birth
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Cell No
+        </th>
+        
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        
+        
+    </tr>
+}
+
+</table>

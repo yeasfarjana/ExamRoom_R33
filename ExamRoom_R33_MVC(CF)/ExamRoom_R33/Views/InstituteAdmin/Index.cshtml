@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ExamRoom_R33.Models.InstituteAdmin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#Add').click(function (event) {
+                event.preventDefault();
+                $.get(this.href, function (response) {
+                    $('.divForAdd').html(response);
+                });
+                $('#Add-Model').modal({
+                    backdrop: 'static',
+                }, 'show');
+            });
+        });
+    </script>
+    
+}
+
+<h2 class="text-center" style="margin-top:80px;">List Of Institution</h2>
+<hr />
+
+<div id="main-div" class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-success" href="@Url.Action("Create", "InstituteAdmin")" id="Add">&nbsp;Add Institute </a>
+
+                <div id="div-record">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InsAdminName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InstituteName)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InsAdminName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InstituteName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.InstituteAdminID }, new { @class = "btn btn-info" }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.InstituteAdminID }, new { @class = "btn btn-info" }) 
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+  
+
+    <div class="modal fade" id="Add-Model">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="text-center">Add Institute</h2>                    
+                </div>
+                <div class="modal-body">
+                    <div class="divForAdd">
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

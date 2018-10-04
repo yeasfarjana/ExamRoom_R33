@@ -1,0 +1,26 @@
+﻿@model ExamRoom_R33.Models.QuestionMaker
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuestionMaker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionMakerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionMakerName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionMakerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

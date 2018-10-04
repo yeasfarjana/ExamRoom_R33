@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ExamRoom_R33.Models.ExamAudit>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br /><br /><br /><br />
+<h1 class="text-center" style="margin-top:80px;">Audit History of Test Table</h1>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TableName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TableName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>        
+    </tr>
+}
+
+</table>
